@@ -1,0 +1,401 @@
+@charset "utf-8";
+/* --------------------------------------------------------
+	media.css
+-------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+  /* --------------------
+  ナビゲーションリンクのスタイル
+  -------------------- */
+  .header{
+    background-color: rgb(255, 255, 255 ) !important;
+    z-index: 9999;
+  }
+
+  .nav-top {
+    display: none; /* 初期状態では非表示 */
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 52px; /* ヘッダーの下に配置ピッタリ */
+    left: 0;
+  }
+
+  .nav-top a {
+    color: #0C4324;
+    text-shadow: none;
+  }
+
+  /* --------------------
+  メニュー表す
+  -------------------- */
+  #header-nav .nav-top li:first-child{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0C4324;
+  }
+
+  /* --------------------
+  ご予約・お問い合わせのボタン
+  -------------------- */
+  #header-nav .nav-top li.btn {
+    width: 12rem;
+    margin: 0 auto 2rem;
+  }
+  #header-nav .nav-top li.btn a {
+    color: #ffffff;
+  }
+
+  /* --------------------
+  ハンバーガークリック時に表示
+  -------------------- */
+  .nav-top.active {
+    display: flex; 
+  }
+
+  /* スマホでは表示 */
+  .hamburger {
+    display: flex; 
+  }
+
+  /* ハンバーガークリック時の変化 */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 5px);
+    position: relative;
+    top: 0;
+  }
+
+   /* 中央のラインを消す */
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -5px);
+    position: relative;
+    top: 0;
+  }
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+  /* --------------------------------------------------------
+	スライダー
+  -------------------------------------------------------- */
+  /* --------------------
+  スライダー サブタイトル 背景装飾
+  -------------------- */
+  .carousel_title {
+    display: flex;
+    justify-content: flex-end;
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 100;
+  }
+
+  .carousel_bg001{
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 28%;
+    left: 10px;
+  }
+
+  .carousel_bg002{
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 75%;
+    left: 10px;
+  }
+
+  /* --------------------
+  カルーセル
+  -------------------- */
+  .carousel {
+    width: 90%;
+    height: 60vh;
+    clip-path: ellipse(66% 70% at 80% 38% );
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 17%;
+  }
+
+  /* グリーンライン */
+  .bgcarousel {
+    width: 70%;
+    height: 55vh;
+    /* .carousel_wrap child */
+    position: absolute;
+    top: -10px;
+    left: 100px;
+    z-index: -100;
+  }
+
+  /* --------------------
+  pc sp 画像 切り替え
+  -------------------- */
+  .pc_img { 
+    display: none !important; 
+  }
+
+  .sp_img { 
+    display: block !important; 
+  }
+
+  /* --------------------------------------------------------
+    お知らせ
+  -------------------------------------------------------- */
+  #news .news_box {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .news_second {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .news_second .news_date {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* 年末年始の営業時間について */
+  .news_second .news_date .news_read {
+    width: 70%;
+    margin-left: 0;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  /* 2022/12/21 */
+  .news_second .news_date .news_day {
+    margin: 0 10px 0 12px;
+  }
+
+  /* --------------------------------------------------------
+    コンセプト
+  -------------------------------------------------------- */
+  /* --------------------
+    コンセプト 背景装飾
+  -------------------- */
+  #concept .concept_bgtitle {
+    /* #concept child */
+    position: absolute;
+    top: 40%;
+    left: -6%;
+    font-size: 6rem;
+    color: rgb(240, 245, 225, 20%);
+  }
+
+  #concept .concept_bg001 {
+    width: 38%;
+    /* #concept child */
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+  }
+  /* --------------------
+    コンセプトbox
+  -------------------- */
+  .concept_box {
+    width: 100%;
+    /* background-color: pink; */
+  }
+
+  .concept_box ul {
+    display: block;
+  }
+
+  .concept_box ul li {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .concept_box ul li.concept_img {
+    /* positionなので高さを指定 */
+    height: 62vh;
+  }
+
+  /* --------------------
+    → 当院について button
+  -------------------- */
+  .concept_text p.btn {
+    text-align: center;
+  }
+
+
+
+
+
+  /* --------------------------------------------------------
+    コース・料金
+  -------------------------------------------------------- */
+  /* --------------------
+    コース・料金 背景装飾
+  -------------------- */
+  #course .course_bgtitle{
+    /* #course child */
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    font-size: 4rem;
+    color: #f7f9f7;
+  }
+
+  #course .course_bg001{
+    width: 45%;
+    /* #course child */
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+  }
+
+  /* --------------------
+    コース・料金内容
+  -------------------- */
+  .course_box ul.course_item{
+    display: block;
+  }
+
+  .course_box ul.course_item li{
+    width: 100%;
+  }
+
+  /* --------------------
+    コース・料金画像
+  -------------------- */
+  ul.course_item li img{
+    width: 100%;
+  }
+
+  /* --------------------
+    保険診療 自費診療
+  -------------------- */
+  .course_box ul.course_item li ul{
+    padding-bottom: 2rem;
+  }
+
+
+  /* --------------------------------------------------------
+    お客様の声
+  -------------------------------------------------------- */
+  /* --------------------
+    半円
+  -------------------- */
+  /* semicircle 半円 */
+  #voice .semicircle{
+    /* #voice child */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    /* 図形のCSS */
+    width: 200px;
+    height: 60px;
+  }
+
+  /* --------------------
+    お客様の声 タイトル
+  -------------------- */
+  .voice_box .semicircle .voice_title{
+    padding-top: 2rem;
+  }
+
+  /* --------------------
+    お客様の声見出し
+  -------------------- */
+  #voice .voice_lead{
+    margin: 40px auto 4rem;
+  }
+
+  /* --------------------
+    お客様の声内容
+  -------------------- */
+  .voice_box ul.voice_item{
+    display: block;
+  }
+
+  .voice_box ul.voice_item li{
+    width: 100%;
+  }
+
+  /* --------------------
+    S・K様 30代女性
+  -------------------- */
+  .voice_box ul.voice_item li .voice_spot{
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .voice_box ul.voice_item li .voice_text{
+    padding-bottom: 2rem;
+  }
+
+  /* --------------------------------------------------------
+    アクセス
+  -------------------------------------------------------- */
+
+  /* --------------------
+  アクセス内容
+  -------------------- */
+  .access_box ul.access_item{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 3rem;
+  }
+
+  .access_box ul.access_item li{
+    width: 100%;
+  }
+
+  /* --------------------
+    table 営業時間
+  -------------------- */
+  table.access_hours{
+    margin-bottom: rem;
+  }
+
+  /* --------------------
+    ご予約・お問い合わせはこちらから button
+  -------------------- */
+  ul.access_item li .btn{
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  /* ---------------------------------------------------------------------------------------
+  フッター
+  --------------------------------------------------------------------------------------- */
+  #footer-nav {
+    display: block;
+  }
+
+  #footer-nav ul.nav-item {
+    display: block;
+  }
+
+  #footer-nav ul.nav-item li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  #footer-nav .nav-item a {
+    color: #0C4324;
+  }
+  
+}
+
+
+
+
