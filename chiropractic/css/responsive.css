@@ -1,0 +1,862 @@
+@charset "utf-8";
+/* --------------------------------------------------------
+	media.css
+-------------------------------------------------------- */
+
+/* ====================
+index.html
+==================== */
+@media screen and (max-width: 768px) {
+
+  /* --------------------
+  spナビゲーションリンクのスタイル
+  -------------------- */
+  .nav {
+    position: fixed;
+    right: -100%; /* 右から出てくる */
+    top: 0;
+    width: 100%; /* スマホに収まるサイズ */
+    height: 100vh;
+    padding-top: 0;
+    transition: all .6s;
+    z-index: 100;
+    background-color: #ffffff;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+
+  /* --------------------
+  ハンバーガーの三本線
+  -------------------- */
+  .hamburger {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 40px; /* クリックしやすい幅 */
+    height: 40px; /* クリックしやすい高さ */
+    cursor: pointer;
+    z-index: 9999;
+  }
+  .hamburger_border {
+    position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 2px;
+    background-color: #0C4324;
+    transition: all .6s;
+  }
+  .hamburger_border_top {
+    top: 14px;
+  }
+  .hamburger_border_center {
+    top: 20px;
+  }
+  .hamburger_border_bottom {
+    top: 26px;
+  }
+  .nav-open .hamburger_border_top {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav-open .hamburger_border_center {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger_border_bottom {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+
+  /* 表示された時用のCSS */
+  .nav-open .nav {
+    right: 0;
+  }
+  .nav-open .black_bg {
+    opacity: .8;
+    visibility: visible;
+  }
+
+  /* --------------------
+  メニュースタイル
+  -------------------- */
+  .nav_list {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+
+  .nav_list li {
+   width: 100%;
+   margin-left: 0;
+   padding: 10px 0;
+  }
+
+  .nav .nav_list .nav_logo {
+    width: 80%;
+    padding-top: 15px;
+    font-size: 1.2rem;
+  }
+
+  ul.nav_list li.nav_item a {
+    color: #0C4324;
+    /* 文字シャドウ消す */
+    text-shadow: none;
+    font-weight: 600;
+  }
+  
+  /* --------------------
+  ロゴメニュー表す
+  -------------------- */
+  .nav .nav_list li:nth-child(-n+2){
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0C4324;
+  }
+
+  /* --------------------
+  ご予約・お問い合わせのボタン
+  -------------------- */
+  .nav .nav_list li.btn {
+    width: 12rem;
+    margin: 2rem auto;
+  }
+  .nav .nav_list li.btn a {
+    color: #ffffff;
+  }
+
+}
+
+@media screen and (max-width: 580px) {
+  /* --------------------
+  pc sp 画像 切り替え SP
+  -------------------- */
+  /* index.html スライダー */
+  .pc_img { 
+    display: none !important; 
+  }
+
+  .sp_img { 
+    display: block !important; 
+  }
+
+  /* index.html グリーンライン */
+  .pcbg_carousel{
+    display: none !important; 
+  }
+
+  .spbg_carousel { 
+    display: block !important; 
+  }
+
+  /* index.html お客様の声 */
+  .pc_voiceimg{
+    display: none !important; 
+  }
+  
+  .sp_voiceimg{
+    display: block !important;
+  }
+
+  /* about.html グリーンライン */
+  .mainview_wrap .pcbg_mainview{
+    display: none !important; 
+  }
+
+  .mainview_wrap .spbg_mainview{
+    display: block !important; 
+  }
+
+  /* --------------------------------------------------------
+	スライダー
+  -------------------------------------------------------- */
+  /* --------------------
+  スライダー サブタイトル 背景装飾
+  -------------------- */
+  .carousel_title {
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 30%;
+    left: 0;
+  }
+
+  .carousel_bg001{
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 28%;
+    left: 0;
+  }
+
+  .carousel_bg002{
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 75%;
+    left: 0;
+  }
+
+  /* --------------------
+  カルーセル
+  -------------------- */
+  .carousel {
+    width: 90%;
+    height: 60vh;
+    clip-path: ellipse(66% 70% at 80% 38% );
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 17%;
+  }
+
+  /* グリーンライン */
+  .spbg_carousel {
+    width: 70%;
+    height: 55vh;
+    /* .carousel_wrap child */
+    position: absolute;
+    top: -10px;
+    left: 100px;
+    z-index: -100;
+  }
+  
+  /* --------------------------------------------------------
+    お知らせ
+  -------------------------------------------------------- */
+  #news .news_box {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .news_second {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .news_second .news_date {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* 2022/12/21 */
+  .news_second .news_date .news_day {
+    margin: 0 10px 0 12px;
+  }
+
+  /* 年末年始の営業時間について */
+  .news_second .news_read {
+    width: 50%;
+    margin-left: 6%;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  /* --------------------------------------------------------
+    コンセプト
+  -------------------------------------------------------- */
+  /* --------------------
+    コンセプト 背景装飾
+  -------------------- */
+  #concept .concept_bgtitle {
+    /* #concept child */
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 6rem;
+  }
+
+  #concept .concept_bg001 {
+    width: 38%;
+    /* #concept child */
+    position: absolute;
+    bottom: 10%;
+  }
+  /* --------------------
+    コンセプトbox
+  -------------------- */
+  .concept_box {
+    width: 100%;
+  }
+
+  .concept_box ul {
+    display: block;
+  }
+
+  .concept_box ul li {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .concept_box ul li.concept_img {
+    /* positionなので高さを指定 */
+    height: 62vh;
+  }
+
+  /* --------------------
+  日々変化するカラダと心を癒す
+  -------------------- */
+  #concept .concept_content{
+    font-size: 2rem;
+  }
+
+  /* --------------------
+  説明explain
+  -------------------- */
+  .concept_text .concept_explain p{
+    font-size: 1.2rem;
+    padding: 0 0 2rem 0;
+  }
+
+  /* --------------------
+    → 当院について button
+  -------------------- */
+  .concept_text p.btn {
+    text-align: center;
+  }
+
+  /* --------------------------------------------------------
+    コース・料金
+  -------------------------------------------------------- */
+  /* --------------------
+    コース・料金 背景装飾
+  -------------------- */
+  #course .course_bgtitle{
+    /* #course child */
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    font-size: 4rem;
+  }
+
+  #course .course_bg001{
+    width: 45%;
+    /* #course child */
+    position: absolute;
+    bottom: 20px;
+  }
+
+  /* --------------------
+    コース・料金内容
+  -------------------- */
+  .course_box ul.course_item{
+    display: block;
+  }
+
+  .course_box ul.course_item li{
+    width: 100%;
+  }
+
+  /* --------------------
+    コース・料金画像
+  -------------------- */
+  ul.course_item li img{
+    width: 100%;
+  }
+
+  /* --------------------
+    保険診療 自費診療
+  -------------------- */
+  .course_box ul.course_item li ul{
+    padding-bottom: 2rem;
+  }
+
+  /* --------------------------------------------------------
+    お客様の声
+  -------------------------------------------------------- */
+  /* --------------------
+    半円
+  -------------------- */
+  #voice img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  /* semicircle 半円 */
+  #voice .semicircle{
+    /* #voice child */
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    /* 図形のCSS */
+    width: 200px;
+    height: 60px;
+  }
+
+  /* --------------------
+    お客様の声 タイトル
+  -------------------- */
+  .voice_box .semicircle .voice_title{
+    padding-top: 2rem;
+  }
+
+  /* --------------------
+    お客様の声見出し
+  -------------------- */
+  #voice .voice_lead{
+    margin: 40px auto 4rem;
+  }
+
+  /* --------------------
+    お客様の声内容
+  -------------------- */
+  .voice_box ul.voice_item{
+    display: block;
+  }
+
+  .voice_box ul.voice_item li{
+    width: 100%;
+  }
+
+  /* --------------------
+    S・K様 30代女性
+  -------------------- */
+  .voice_box ul.voice_item li .voice_spot{
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .voice_box ul.voice_item li .voice_text{
+    padding-bottom: 2rem;
+  }
+
+/* --------------------------------------------------------
+  アクセス
+-------------------------------------------------------- */
+/* --------------------
+アクセス内容
+-------------------- */
+  .access_box ul.access_item{
+    width: 90%;
+    display: block;
+    padding-bottom: 3rem;
+  }
+
+  .access_box ul.access_item li{
+    width: 100%;
+  }
+
+  /* --------------------
+    ご予約・お問い合わせはこちらから button
+  -------------------- */
+  ul.access_item li .btn{
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  /* ---------------------------------------------------------------------------------------
+  フッター
+  --------------------------------------------------------------------------------------- */
+  #footer-nav {
+    display: block;
+  }
+
+  #footer-nav ul.nav-item {
+    display: block;
+  }
+
+  #footer-nav ul.nav-item li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  #footer-nav .nav-item a {
+    color: #0C4324;
+  }
+  
+}
+/* index.html */
+
+
+
+/* ====================
+	about.html SP
+==================== */
+@media screen and (max-width: 580px) {
+
+  /* ----------------------------
+    メイン画像
+  ---------------------------- */
+  .mainview_wrap{
+    height: 65vh;
+  }
+
+  /* ----------------------------
+  メイン画像 サブタイトル 背景装飾
+  ---------------------------- */
+  .mainview_title p{
+    font-size: 2rem;
+    /* .mainview_wrap child */
+    position: absolute;
+    top: 70%;
+    left: 10%;
+  }
+
+  .mainview_title p span {
+    font-size: 3rem;
+  }
+
+  .mainview_bg001{
+    /* .mainview_wrap child */
+    position: absolute;
+    top: 63%;
+  }
+
+  .mainview_bg001 .bg001{
+    width: 186px;
+  }
+
+/* ----------------------------
+メインimg
+---------------------------- */
+  .mainview_wrap .sp_img {
+    width: 90%;
+    clip-path: ellipse(72% 90% at 76% 12%);
+    /* .carousel_wrap child */
+    position: absolute;
+    top: 0px;
+    left: 20%;
+  }
+
+  /* グリーンライン */
+  .mainview_wrap .spbg_mainview {
+    width: 450px;
+    height: 480px;
+    /* .carousel_wrap child */
+    position: absolute;
+    top: -90px;
+    left: 76px;
+    z-index: -10;
+  }
+
+  /* ----------------------------
+  パンくず
+  ---------------------------- */
+  .bread_box ul.bread_fourth {
+    padding: 0 0 18px;
+  }
+
+  /* ----------------------------
+  Flow 施術の流れ
+  ---------------------------- */
+  .concept_text p.concept_lead {
+    padding-bottom: 3rem;
+  }
+
+  /* ----------------------------
+  根本改善のポイント waveなし
+  ---------------------------- */
+  #points {
+    margin-top: 3rem;
+  }
+
+  /* --------------------
+    根本改善のポイント 背景装飾
+  -------------------- */
+  #points .points_bg001{
+    /* #points child */
+    bottom:40px;
+  }
+
+  /* --------------------
+    根本改善のポイント内容
+  -------------------- */
+  .points_box ul.points_item{
+    display: block;
+  }
+
+  .points_box ul.points_item li{
+    width: 100%;
+  }
+
+  /* --------------------
+    保険診療 自費診療
+  -------------------- */
+  .points_box ul.points_item li .points_spot{
+    padding-bottom: 2rem;
+  }
+
+}
+/* about.html SP */
+
+
+/* ====================
+	course.html SP
+==================== */
+@media screen and (max-width: 580px) {
+
+  /* --------------------
+    コース・プライス
+  -------------------- */
+  /* --------------------
+	コース・プライス box
+  -------------------- */
+  #price .price_box{
+    /* セクションの終わりに */
+    padding-bottom: 1rem;
+  }
+  /* --------------------
+	コース・プライス内容
+  -------------------- */
+  .price_box ul.price_item{
+    width: 85%;
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .price_box ul.price_item li:first-child{
+    width: 100%;
+    padding-left: 0;
+  }
+
+  /* --------------------
+	スポーツ診療 交通事故
+  -------------------- */
+  .price_box ul.price_item li ul{
+    margin-bottom: 3rem;
+  }
+
+  /* ===============================
+    保険診療 自費診療 インシュアランス
+  =============================== */
+  /* --------------------
+    保険診療 自費診療  box
+  -------------------- */
+  .insurance_box{
+    /* セクションの横幅 */
+    width: 100%;
+    margin: 0 auto;
+    /* セクションの上 幅 */
+    padding-top: 3rem;
+    /* background-color: pink; */
+  }
+
+  .insurance_box ul{
+    display: block;
+  }
+
+  .insurance_box ul li{
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  /* --------------------
+	iconとInsurance タイトル
+  -------------------- */
+  .insurance_box li.insurance_text{
+    padding-top: 2rem;
+  }
+
+}
+/* course.html SP */
+
+
+
+/* ====================
+	news.html SP
+==================== */
+@media screen and (max-width: 580px) {
+  #news{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #news .news_main{
+    width: 100%;
+    /* セクションの上下の幅 */
+    padding: 3rem 0;
+  }
+  
+  /* --------------------
+    サイドバー
+  -------------------- */
+  #news .news_side{
+    width: 100%;
+    /* サイドバーの上下の幅 */
+    padding: 3rem 2.5rem;
+  }
+
+  /* --------------------
+    投稿内容 box
+  -------------------- */
+  #news dl.news_box {
+    margin: 0 auto;
+    /* parent */
+    display: block;
+  }
+
+  #news dl.news_box dt{
+    /* .news_box child */
+    width: 100%;
+  }
+  
+  #news dl.news_box dd {
+    /* .news_box child */
+    width: 100%;
+  }
+
+  /* --------------------
+	投稿記事タイトル
+  -------------------- */
+  /* 投稿記事タイトル */
+  dl.news_box dd p.news_titel {
+    margin-top: 2rem;
+  }
+
+}
+/* news.html SP */
+
+
+
+/* ====================
+	detail.html SP
+==================== */
+@media screen and (max-width: 580px) {
+  #detail{
+    display: block;
+  }
+  
+  #detail .detail_main{
+    width: 100%;
+  }
+
+  /* --------------------
+    サイドバー
+  -------------------- */
+  #detail .detail_side{
+    width: 100%;
+    /* サイドバーの上下の幅 */
+    padding: 3rem 2.5rem;
+  }
+  
+  /* --------------------
+    投稿記事
+  -------------------- */
+  #detail .detail_main .detail_box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* --------------------
+  画像
+  -------------------- */
+  .detail_box .detail_img img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .top-left {
+    object-position: 100% 100%;
+  }
+
+  /* 記事 */
+  #detail .detail_main .detail_text p {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  /* --------------------
+  ページャー
+  -------------------- */
+  ul.pager {
+    /* ページャーの下の幅 */
+    margin: 3rem 0 0;
+  }
+
+}
+/* detail.html SP */
+
+
+
+/* ====================
+	voice.html SP
+==================== */
+@media screen and (max-width: 580px) {
+  /* --------------------
+  お客様の声 box
+  -------------------- */
+  #customer ul.customer_box {
+    display: block;
+    margin: 0 auto;
+    /* セクションの高さ */
+    padding: 4rem 0 0;
+  }
+
+  #customer ul.customer_box li {
+    width: 100%;
+  }
+
+  /* --------------------
+  お客様の声 img
+  -------------------- */
+  #customer ul.customer_box li.customer_img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* --------------------
+  お客様の声 text
+  -------------------- */
+  #customer ul.customer_box li.customer_text {
+    margin-left: 0;
+  }
+
+  /* 30代女性 */
+  li.customer_text .customer_spot {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+  }
+}
+/* voice.html SP */
+
+
+
+/* ====================
+	contact.html SP
+==================== */
+@media screen and (max-width: 580px) {
+  /* --------------------
+  お問い合わせフォーム
+  -------------------- */
+  label {
+    width: 90%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  /* --------------------
+  お問い合わせフォームボタン
+  -------------------- */
+  button {
+    width: 50%;
+  }
+
+}
+/* contact.html SP */
+
+
+
+/* ====================
+	contact-thanks.html SP
+==================== */
+@media screen and (max-width: 580px) {
+  #thanks {
+    width: 86%;
+  }
+
+  #thanks .thanks_box {
+    padding: 3rem;
+  }
+
+}
+/* contact-thanks.html SP */

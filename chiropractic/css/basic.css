@@ -1,0 +1,914 @@
+@charset "utf-8";
+/* --------------------------------------------------------
+	basic.css
+-------------------------------------------------------- */
+/* ====================
+	about.html PC
+==================== */
+/* ----------------------------
+	ヘッダー
+---------------------------- */
+.header{
+  background: #ffffff;
+}
+
+/* ----------------------------
+ナビゲーションリンクのスタイル
+---------------------------- */
+.header_inner > .nav > .nav_list > li.nav_item > a {
+	color: #468459;
+	text-shadow: none;
+}
+
+/* ----------------------------
+ご予約・お問い合わせのボタン
+---------------------------- */
+.header_inner > .nav > .nav_list > li.btn a{
+	color: #ffffff;
+}
+
+/* ----------------------------
+	メイン画像
+---------------------------- */
+.mainview_wrap{
+	width: 100%;
+	height: 90vh;
+	/* parent */
+	position: relative;
+}
+
+/* ----------------------------
+メイン画像 サブタイトル 背景装飾
+---------------------------- */
+.mainviewl_title {
+	display: flex;
+	justify-content: flex-end;
+	/* .mainview_wrap child */
+	position: absolute;
+	top: 12%;
+	left: 100px;
+	z-index: 100;
+}
+
+.mainview_title p{
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	color: #468459;
+	border-bottom: #468459 1px dashed;
+	/* .mainview_wrap child */
+  position: absolute;
+	top: 55%;
+	left: 5%;
+  z-index: 10;
+}
+
+.mainview_title p span {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.mainview_bg001{
+	/* .mainview_wrap child */
+	position: absolute;
+	top: 45%;
+	left: 0;
+}
+
+.mainview_bg001 .bg001{
+  width: 146px;
+}
+
+/* ----------------------------
+メインimg
+---------------------------- */
+.mainview_wrap .pc_img {
+	width: 86%;
+	height: 100vh;
+	/* ヘッダー分下へ移動 */
+	margin-top: 50px;
+	clip-path: ellipse( 70% 95% at 77% 32%);
+	/* .mainview_wrap child */
+	position: absolute;
+	top: 0;
+	left: 17%;
+}
+
+/* グリーンライン */
+.mainview_wrap .pcbg_mainview {
+	width: 530px;
+	height: 500px;
+	/* .carousel_wrap child */
+	position: absolute;
+	top: 0px;
+	left: 265px;
+	z-index: -10;
+}
+
+/* ----------------------------
+パンくず
+---------------------------- */
+.bread_box ul.bread_fourth {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.bread_box ul.bread_fourth li {
+  margin-right: 5px;
+}
+
+.bread_box ul.bread_fourth li:last-child{
+  color: #468459;
+}
+
+/* ----------------------------
+Flow 施術の流れ
+---------------------------- */
+.concept_text p.concept_lead {
+	padding-bottom: 6rem;
+
+}
+
+.concept_text .concept_read{
+	font-size: 1rem;
+}
+
+.concept_text .concept_read p:nth-child(-n+4){
+	padding-bottom: 1rem;
+}
+
+/* ----------------------------
+根本改善のポイント waveなし
+---------------------------- */
+#points {
+	margin-top: 10rem;
+	/* parent */
+	position: relative;
+}
+
+/* --------------------
+	根本改善のポイント 背景装飾
+-------------------- */
+#points .points_bg001{
+	width: 28%;
+	/* #points child */
+	position: absolute;
+	bottom: 100px;
+	right: 0;
+}
+
+/* --------------------
+	根本改善のポイント タイトル
+-------------------- */
+.points_box .points_title{
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: #468459;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.points_box .points_title::before{
+	content: url(../img/Head_02_DecoLeft16.png);
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+.points_box .points_title::after{
+	content: url(../img/Head_02_DecoRight14.png);
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+/* --------------------
+	根本改善のポイント見出し
+-------------------- */
+.points_box .points_lead{
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: #468459;
+	text-align: center;
+	padding-bottom: 4rem;
+}
+
+/* --------------------
+	根本改善のポイント内容
+-------------------- */
+.points_box ul.points_item{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding-bottom: 4rem;
+}
+
+.points_box ul.points_item li{
+	width: calc(100% / 3 - 6%);
+	z-index: 999;
+}
+
+/* --------------------
+	根本改善のポイント画像
+-------------------- */
+ul.points_item li img{
+	border-radius: 20px;
+}
+
+/* --------------------
+	保険診療 自費診療  自費診療
+-------------------- */
+.points_box ul.points_item li .points_spot{
+	font-size: 1.2rem;
+	font-weight: 800;
+	text-align: center;
+	color: #0C4324;
+	padding-top: 1.2rem;
+	line-height: 200%;
+}
+
+
+
+/* ====================
+	course.html PC
+==================== */
+/* --------------------------------------------------------
+	コース・プライス
+-------------------------------------------------------- */
+#price {
+	/* parent */
+	position: relative;
+}
+
+/* --------------------
+	コース・プライス box
+-------------------- */
+#price .price_box{
+	padding-top: 3rem;
+	background: #fafafa;
+	/* セクションの終わりに */
+	padding-bottom: 4rem;
+}
+
+/* --------------------
+	コース・プライス タイトル
+-------------------- */
+.price_box .price_title{
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: #468459;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.price_box .price_title::before{
+	content: url(../img/Head_02_DecoLeft16.png);
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+.price_box .price_title::after{
+	content: url(../img/Head_02_DecoRight14.png);
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+/* --------------------
+	コース・プライス見出し
+-------------------- */
+.price_box .price_lead{
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: #468459;
+	text-align: center;
+	padding-bottom: 4rem;
+}
+
+/* --------------------
+	コース・プライス内容
+-------------------- */
+.price_box ul.price_item{
+  /* セクションの横幅 */
+	width: 65%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding-bottom: 4rem;
+}
+
+.price_box ul.price_item li{
+	width: calc(100% / 2 - 6%);
+	z-index: 999;
+}
+
+/* --------------------
+	コース・プライス画像
+-------------------- */
+ul.price_item li img{
+	width: 360px;
+	border-radius: 20px;
+}
+
+/* --------------------
+	保険診療 交通事故
+-------------------- */
+.price_box ul.price_item li .price_spot{
+	font-size: 1.2rem;
+	font-weight: 800;
+	text-align: left;
+	color: #468459;
+	padding-top: 1.2rem;
+	line-height: 200%;
+}
+
+.price_box ul.price_item li ul li{
+	width: 100%;
+	padding-left: 1rem;
+	line-height: 200%;
+}
+
+/* --------------------
+	→ コース・プライス詳細へ  button
+-------------------- */
+.price_box p.btn{
+	width: 16rem;
+	margin: 0 auto;
+	/* コンテンツの下に空き */
+	padding-bottom: 4rem;
+}
+
+.price_box p.btn .link_btn {
+	padding: 10px 30px;
+	background: #ffffff;
+	border: #0C4324 1px solid;
+	border-radius: 6px;
+}
+
+.price_box p.btn a {
+	color: #0C4324;
+	/* 共通cssの打ち消し */
+	opacity: 100;
+}
+
+.price_box p.btn a:hover,
+.price_box p.btn a:active{
+	color: #ffffff;
+	background: #1B9240;
+	border: #1B9240 1px solid;
+	transition: 1.0s ;/* ゆっくり変化 */
+}
+
+/* --------------------
+	保険診療 自費診療 インシュアランス
+----------------------- */
+#insurance {
+	/* parent */
+	position: relative;
+	/* セクションの終わりに */
+	padding-bottom: 4rem;
+}
+
+/* --------------------
+	保険診療 自費診療  box
+-------------------- */
+.insurance_box{
+  /* セクションの横幅 */
+	width: 65%;
+	margin: 0 auto;
+  /* セクションの上 幅 */
+  padding-top: 3rem;
+	/* background-color: pink; */
+}
+
+.insurance_box ul{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+.insurance_box ul li{
+	width: calc(100% / 2);
+}
+
+/* --------------------
+	iconとInsurance タイトル
+-------------------- */
+.insurance_text{
+  padding-right: 2rem;
+}
+
+.insurance_mark{
+	font-size: 20px;
+	color: #468459;
+}
+
+p.insurance_mark::before {
+	content: "";
+	display: inline-block;
+	/* 幅は画像の後の後ろの空き */
+	width: 25px;
+	/* 高さを調整すると幅は決まる */
+	height: 20px;
+	background: url(../img/Head_01_Icon@2x.png) no-repeat;
+	background-size: contain;
+}
+
+/* --------------------
+	保険診療 自費診療 
+-------------------- */
+#insurance .insurance_lead{
+	font-size: 15px;
+	color: #468459;
+	margin-bottom: 1rem;
+}
+
+/* --------------------
+  保険診療 自費診療  画像
+-------------------- */
+li.insurance_img img{
+  border-radius: 20px;
+}
+
+/* --------------------
+	健康保険の適用は、慢性化していない～
+-------------------- */
+#insurance .insurance_content{
+	font-size: 1rem;
+	line-height: 180%;
+	margin-bottom: 1rem;
+}
+
+/* --------------------
+	説明explain
+-------------------- */
+.insurance_text .insurance_explain p{
+	font-size: 0.8rem;
+	font-weight: 500;
+  line-height: 200%;
+  margin-left: 1rem;
+}
+
+/* --------------------
+	料金 read
+-------------------- */
+.insurance_text .insurance_read{
+  font-size: 1rem;
+	line-height: 180%;
+	margin: 1rem 0;
+}
+
+
+
+/* ====================
+	news.html PC
+==================== */
+/* --------------------
+	main
+-------------------- */
+#news{
+	width: 100%;
+	margin: 0 auto;
+  display: flex;
+	justify-content: space-between;
+	align-content: center;
+}
+
+#news .news_main{
+	width: 80%;
+	/* background: pink; */
+}
+
+#news .news_side{
+	width: 19%;
+	/* background: yellowgreen; */
+}
+
+/* --------------------
+	投稿内容 box
+-------------------- */
+#news dl.news_box {
+  margin: 0 0 0 8%;
+	/* parent */
+	display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+#news dl.news_box dt{
+	/* .news_box child */
+  width: 45%;
+}
+
+#news dl.news_box dd {
+	/* .news_box child */
+  width: 50%;
+}
+
+/* --------------------
+	投稿内容img
+-------------------- */
+dl.news_box dt img {
+  border-radius: 20px;
+}
+
+/* --------------------
+	投稿記事タイトル
+-------------------- */
+/* 投稿記事タイトル */
+dl.news_box dd p.news_titel {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-right: 3rem;
+}
+
+/* --------------------
+	日時
+-------------------- */
+ul.news_posts {
+  /* parent */
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+ul.news_posts li{
+  margin-top: 1rem;
+}
+
+/* 2023年2月1日 */
+ul.news_posts li.news_day {
+  font-size: 1rem;
+  padding-right: 2rem;
+}
+
+/* 営業日時 */
+ul.news_posts li.news_date {
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: #468459;
+  padding: 3px 15px 2px;
+  border-radius: 5px;
+}
+
+/* --------------------
+	サイドバー
+-------------------- */
+.detail_side > h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #468459;
+}
+
+.news_side ul li.link{
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* --------------------
+ページネーション
+-------------------- */
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ページネーションの下の幅 */
+  margin: 3rem 0 6rem;
+}
+
+ul.pagination li{
+  font-size: 1rem;
+  padding: 3px 10px;
+}
+
+ul.pagination li:first-child{
+  background: #ccc;
+}
+
+
+
+/* ====================
+	detail.html PC
+==================== */
+#detail{
+	width: 100%;
+	margin: 0 auto;
+ display: flex;
+	justify-content: space-between;
+	align-content: center;
+}
+
+#detail .detail_main{
+	width: 80%;
+}
+
+#detail .detail_side{
+	width: 19%;
+}
+
+/* --------------------
+	投稿記事
+-------------------- */
+#detail .detail_main .detail_box {
+  width: 90%;
+  margin-left: auto;
+}
+
+/* --------------------
+	投稿記事タイトル
+-------------------- */
+/* 投稿記事タイトル */
+.detail_main p.detail_titel {
+	font-size: 2rem;
+	font-weight: 900;
+	margin-right: 3rem;
+	color: #468459;
+}
+
+/* --------------------
+日時
+-------------------- */
+ul.detail_posts {
+	/* parent */
+	display: flex;
+	justify-content: start;
+	align-items: start;
+}
+
+ul.detail_posts li{
+	margin-top: 1rem;
+}
+
+/* 2023年2月1日 */
+ul.detail_posts li.detail_day {
+	font-size: 1rem;
+	padding-right: 2rem;
+}
+
+/* 営業日時 */
+ul.detail_posts li.detail_date {
+	font-size: 0.8rem;
+	color: #ffffff;
+	background-color: #468459;
+	padding: 3px 15px 2px;
+	border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+/* --------------------
+画像
+-------------------- */
+.detail_box .detail_img img {
+  border-radius: 20px;
+  width: 80%;
+  height: 360px;
+  object-fit: cover; 
+}
+.top-left {
+  object-position: 100% 0% ;
+}
+
+/* --------------------
+記事 h2 h3 h4
+-------------------- */
+#detail .detail_main h2, h3, h4 {
+  color: #468459;
+  font-weight: 900;
+  padding: 2rem 0;
+}
+
+/* 記事 */
+#detail .detail_main .detail_text p {
+  width: 83%;
+  padding-bottom: 1rem;
+}
+
+/* --------------------
+ページャー
+-------------------- */
+ul.pager {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* ページャーの下の幅 */
+	margin: 7rem 0 7rem;
+}
+
+ul.pager li{
+	font-size: 1rem;
+	padding: 3px 10px;
+}
+
+
+
+/* ====================
+	voice.html PC
+==================== */
+/* --------------------
+お客様の声 box
+-------------------- */
+#customer ul.customer_box {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+  width: 80%;
+  margin: 0 auto;
+  /* セクションの高さ */
+  padding: 4rem 0 0;
+}
+
+#customer ul.customer_box li {
+	width: calc(100 / 2);
+}
+
+/* --------------------
+お客様の声 img
+-------------------- */
+#customer ul.customer_box li.customer_img {
+  width: 20%;
+}
+
+#customer ul.customer_box li.customer_img img {
+ border-radius: 50%;
+}
+
+/* --------------------
+お客様の声 text
+-------------------- */
+#customer ul.customer_box li.customer_text {
+	margin-left: 2rem;
+}
+
+/* 30代女性 */
+li.customer_text .customer_spot {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #468459;
+  padding-bottom: 1rem;
+}
+
+
+
+/* ====================
+	contact.html PC
+==================== */
+/* --------------------
+ご予約・お問い合わせ
+-------------------- */
+#contact {
+  width: 86%;
+  margin: 0 auto;
+	/* background: pink; */
+}
+
+/* お電話でのご予約・お問い合わせ */
+.contact_box .contact_title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #468459;
+  margin: 2rem 0 1.2rem;
+}
+
+/* 東京都千代田区神田練塀町 */
+.contact_box .contact_add {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* tel:03-1234-5678 */
+.contact_box .contact_phone {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #468459;
+  margin-bottom: 4rem;
+}
+
+/* ご予約・お問い合わせフォーム */
+.contact_box .contact_spot {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #468459;
+  margin: 2rem 0 1.2rem;
+}
+
+.contact_box .contact_notes {
+  margin-bottom: 3rem;
+}
+
+/* --------------------
+お問い合わせフォーム
+-------------------- */
+#form{
+	width: 86%;
+	margin: 0 auto;
+	/* background: pink; */
+}
+
+form {
+	display: block;
+}
+
+label {
+  width: 60%;
+	display: block;
+	font-weight: 800;
+  padding: 2rem 0 0.8rem;
+}
+
+label .pick {
+  font-size: 0.8rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 60%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input placeholder {
+  color: #cccccc;
+}
+
+/* --------------------
+お問い合わせフォームボタン
+-------------------- */
+button {
+	display: block;
+	width: 12%;
+	margin: 3rem auto;
+  padding: 10px 20px;
+	background-color: #468459;
+	color: #ffffff;
+  border: #468459 1px solid;
+	border-radius: 6px;
+}
+
+button:hover,
+button:active {
+  margin: 3rem auto;
+  padding: 10px 20px;
+	color: #0C4324;
+	background: #ffffff;
+	border: #0C4324 1px solid;
+	border-radius: 6px;
+	transition: 1.0s ;/* ゆっくり変化 */
+}
+
+
+
+/* ====================
+	contact-thanks.html PC
+==================== */
+#thanks {
+	width: 55%;
+	margin: 3rem auto 5rem;
+	text-align: center;
+  border: #050505 1px solid;
+}
+
+#thanks .thanks_box {
+	padding: 3rem 0 ;
+}
+
+/* お問い合わせ内容を送信しました */
+#thanks .thanks_box .thanks_title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #468459;
+  margin: 2rem 0 1.2rem;
+}
+
+/* --------------------
+戻るボタン
+-------------------- */
+#thanks .thanks_box .btn {
+  width: 12rem;
+  margin: 3rem auto 2rem;
+  background: #1B9240;
+  border: #1B9240 1px solid;
+  border-radius: 6px;
+}
+
+#thanks .thanks_box .btn a {
+  display: block;
+  padding: 10px 25px;
+  color: #ffffff;
+  border: #1B9240 1px solid;
+  /* 共通cssの打ち消し */
+  opacity: 100;
+}
+
+#thanks .thanks_box p a:hover,
+#thanks .thanks_box p a:active {
+  color: #0C4324;
+  background: #ffffff;
+  border: #0C4324 1px solid;
+  border-radius: 6px;
+  transition: 1.0s ;/* ゆっくり変化 */
+}

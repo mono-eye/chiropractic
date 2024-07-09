@@ -3,27 +3,25 @@ script.js
 ========================================== */
 
 /* ----------------------------------------
-ハンバーガーメニュー
+ハンバーガーメニュー  style.css
 ---------------------------------------- */
-// DOMが完全に読み込まれた後に実行
-	document.addEventListener('DOMContentLoaded', () => {
-	// ハンバーガーメニューの要素を取得
-	const hamburger = document.querySelector('.hamburger');
-	// ナビゲーションリンクの要素を取得
-	const navTop = document.querySelector('.nav-top');
+function toggleNav() {
+  var body = document.body;
+  var hamburger = document.getElementById('js-hamburger');
+  var blackBg = document.getElementById('js-black-bg');
 
-	// ハンバーガーメニューがクリックされた時のイベントリスナーを追加
-	hamburger.addEventListener('click', () => {
-		// ナビゲーションリンクの表示・非表示を切り替え
-		navTop.classList.toggle('active');
-		// ハンバーガーアイコンの変化を切り替え
-		hamburger.classList.toggle('active');
-	});
-});
+  hamburger.addEventListener('click', function() {
+    body.classList.toggle('nav-open');
+  });
+  blackBg.addEventListener('click', function() {
+    body.classList.remove('nav-open');
+  });
+}
+toggleNav();
 
 
 /* ----------------------------------------
-slick carousel
+slick carousel  style.css
 ---------------------------------------- */
 $('.carousel').slick({
     autoplay: true,
@@ -34,7 +32,41 @@ $('.carousel').slick({
 });
 
 /* ----------------------------------------
-戻るボタン
+スクロールしたらヘッダー背景色を変更  style.css
+---------------------------------------- */
+$(function () {
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 600) {
+      $(".js-header").addClass("change-color");
+    } else {
+      $(".js-header").removeClass("change-color");
+    }
+  });
+});
+
+/* ----------------------------------------
+フェードインアニメーション  reset.css
+---------------------------------------- */
+$(function(){
+	$(window).on('load scroll',function (){
+		$('.animate').each(function(){
+			//ターゲットの位置を取得
+			var target = $(this).offset().top;
+			//スクロール量を取得
+			var scroll = $(window).scrollTop();
+			//ウィンドウの高さを取得
+			var height = $(window).height();
+			//ターゲットまでスクロールするとフェードインする
+			if (scroll > target - height){
+				//クラスを付与
+				$(this).addClass('active');
+			}
+		});
+	});
+});
+
+/* ----------------------------------------
+戻るボタン  style.css
 ---------------------------------------- */
 $(function(){
   var topBtn=$('#pageTop');

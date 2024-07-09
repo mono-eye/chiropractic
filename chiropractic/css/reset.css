@@ -40,3 +40,59 @@ table {
 	*::after {
 			box-sizing: border-box;
 		}
+
+
+	/*フェードインアニメーション要素のスタイル*/
+	.animate{
+		opacity : 0;
+		visibility: hidden;
+		transition: 1s;
+		transform: translateY(40vh);
+	}
+
+	/*フェードインアニメーション要素までスクロールした時のスタイル*/
+	.active{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+/* --------------------
+pc sp 画像 切り替え PC
+-------------------- */
+/* index.html スライダー */
+.pc_img { 
+	display: block !important; 
+}
+
+.sp_img { 
+	display: none !important; 
+}
+
+/* index.html グリーンライン */
+.pcbg_carousel{
+	display: block !important; 
+}
+
+.spbg_carousel { 
+	display: none !important; 
+}
+
+/* index.html お客様の声 */
+.pc_voiceimg{
+	display: block !important; 
+}
+
+.sp_voiceimg{
+	display: none !important; 
+}
+
+
+/* about.html グリーンライン */
+.mainview_wrap .pcbg_mainview{
+	display: block !important; 
+}
+
+.mainview_wrap .spbg_mainview{
+	display: none !important; 
+}
